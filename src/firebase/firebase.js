@@ -1,6 +1,11 @@
 import * as firebase from 'firebase';
 
-  // Your web app's Firebase configuration
+
+// Your web app's Firebase configuration
+
+
+
+
 const config = {
     apiKey: process.env.FIREBASE_API_KEY,
     authDomain: process.env.FIREBASE_AUTH_DOMAIN,
@@ -10,16 +15,30 @@ const config = {
     messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
     appId: process.env.FIREBASE_APP_ID
   };
-  // Initialize Firebase
-  firebase.initializeApp(config);
-  const database = firebase.database();``
-  const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-  googleAuthProvider.setCustomParameters({
-    prompt: 'select_account'
-  })
+
+// Initialize Firebase
+  firebase.initializeApp(config);
+  const database = firebase.database()
+
+
+export { firebase, database as default };
+
+
+
+
+
+
+//   // Initialize Firebase
+//   firebase.initializeApp(config);
+//   const database = firebase.database();``
+//   const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+
+//   googleAuthProvider.setCustomParameters({
+//     prompt: 'select_account'
+//   })
   
-  export  { firebase, googleAuthProvider, database as default };
+//   export  {  , googleAuthProvider, database as default };
   
 
 

@@ -6,13 +6,13 @@ export default ((state = inforamtionReducerDefaultState, action) => {
         case 'ADD_INFORMATION':
             return [
                 ...state,
-                action.informationData
+                action.informations
             ]
         case 'REMOVE_INFORMATION':
             return state.filter(({ id }) => id !== action.id )
         case 'EDIT_INFORMATION':
             return state.map((data) => {
-                return (data.id === action.id) ? ({...data, ...action.update }) : (data)
+                return (data.id === action.id) ? ({...data, ...action.updates }) : (data)
             })
         default:
             return state;

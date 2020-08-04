@@ -12,6 +12,13 @@ export const sortByAlphabetical = () => ({
     type: 'SORT_BY_ALPHABETICAL',
 })
 
-export const setcreatedAt = () => ({
-    type: 'SET_CREATEDAT'
+export const setcreatedAt = (creteDate) => ({
+    type: 'SET_CREATEDAT',
+    creteDate
+})
+
+
+export const setUpdateAt = (endDate) => ({
+   type: 'SET_UPDATEAT',
+   endDate
 })

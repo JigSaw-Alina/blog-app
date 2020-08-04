@@ -16,7 +16,7 @@ const BlogPost = ({ information }) => (
 );
 
 const mapStateToProps = (state) => ({
-  information: selectedInformation(state.information, state.filters)
+  information: selectedInformation(state.informations, state.filters)
 });
 
 

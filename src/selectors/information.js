@@ -1,7 +1,7 @@
 // getVisibleInformation
 
-export default (information, { text, sortBy }) => {
-    return information.filter((data) => {
+export default (informations, { text, sortBy }) => {
+    return informations.filter((data) => {
         const textMatch = data.description.toLowerCase().includes(text.toLowerCase());
         return textMatch
     }).sort((a, b) => {

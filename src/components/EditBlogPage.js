@@ -32,7 +32,7 @@ class EditBlogPage extends React.Component {
 }
 
 const mapStateToProps = (state, props) => ({
-  information: state.information.find((informationData) =>  informationData.id === props.match.params.id )
+  information: state.informations.find((informationData) =>  informationData.id === props.match.params.id )
 });
 
 const mapDispatchToProps = (dispatch, props) => ({

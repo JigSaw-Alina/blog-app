@@ -5,22 +5,24 @@ import { Provider } from 'react-redux';
 import AppRouter from './routers/AppRouter';
 import { addInformation } from './actions/informations';
 import getVisibleInformation from './selectors/information';
+import './firebase/firebase';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+// import './play/promise.js';
 
 
 const store = configureStore();
 
 
 
-store.dispatch(addInformation({ description: 'google', note: 'search for information about (someone or something)', createdAt: 1000}))
-store.dispatch(addInformation({ description: 'acebook', note: 'spend time using the social networking website Facebook.', createdAt: 5000}))
+store.dispatch(addInformation({ description: 'google', note: 'search for information about (someone or something)'}))
+store.dispatch(addInformation({ description: 'acebook', note: 'spend time using the social networking website Facebook.'}))
 
 
 
 
     const state = store.getState()
-    const VisibleInformation = getVisibleInformation(state.information, state.filters)
+    const VisibleInformation = getVisibleInformation(state.informations, state.filters)
     console.log(VisibleInformation)
 
 

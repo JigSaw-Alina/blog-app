@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { addInformation } from '../actions/informations';
+import { startAddInformation } from '../actions/informations';
 import BlogForm from './BlogForm';
 
 
@@ -8,7 +8,7 @@ import BlogForm from './BlogForm';
 
 class AddBlogPage extends React.Component {
   onSubmit = (information) => {
-    this.props.addInformation(information)
+    this.props.startAddInformation(information)
     this.props.history.push('/')
   };
   render () {
@@ -25,7 +25,7 @@ class AddBlogPage extends React.Component {
 
 
 const mapDispatchToProps = (dispatch) => ({
-   addInformation: (information) => dispatch(addInformation(information))
+  startAddInformation: (information) => dispatch(startAddInformation(information))
 });
 
 export default connect(undefined, mapDispatchToProps)(AddBlogPage);
