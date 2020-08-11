@@ -1,0 +1,59 @@
+.content__container h1 
+{
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #5e5e5e;
+}
+
+
+
+.text_input
+{
+    border: 1px solid #cacccd;
+    height: 50px;
+    font-size: $m-size;
+    font-weight: 300;
+    padding: $s-size;
+}
+
+.text_area
+{
+    @extend .text_input;
+    height: 20rem;
+    overflow: hidden;
+}
+
+.form 
+{
+    display: flex;
+    flex-direction: column;
+    >* {
+        margin-bottom: $m-size;
+    }
+}
+
+.form__error {
+    margin: 0 0 $m-size 0;
+    font-style: italic;
+    color: red;
+    opacity: 0.7;
+}
+
+.post_btn 
+{
+    font-size: 3rem;
+    color: #3c823c;
+}
+
+.delete__btn 
+{
+    font-size: 3rem;
+    color: #d60f0f;
+   
+}
+
+.move_delete_btn {
+    position: absolute;
+    top: -88px;
+    padding-left: 2rem;
+ }

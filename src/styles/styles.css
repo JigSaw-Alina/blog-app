@@ -1,10 +1,7 @@
-* {
+/* * {
   box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
-}
 
 body {
   font-family: Helvetica, Arial, sans-serif;
@@ -21,5 +18,5 @@ button:disabled {
 
 .is-active {
   font-weight: bold;
-}
+} */
 /*# sourceMappingURL=styles.css.map */

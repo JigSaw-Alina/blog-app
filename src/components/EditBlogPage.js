@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { MdDelete } from 'react-icons/md';
 import BlogForm from './BlogForm';
-import { editInfomation, removeInformation } from '../actions/informations';
+import { startEditinforation, startRemoveinforamtion } from '../actions/informations';
 
 
 
@@ -9,23 +10,34 @@ import { editInfomation, removeInformation } from '../actions/informations';
 class EditBlogPage extends React.Component {
 
   onSubmit = (information) => {
-    this.props.editInfomation(this.props.information.id, information)
+    this.props.startEditinforation(this.props.information.id, information)
     this.props.history.push('/')
   }
 
   onRemove = () => {
-    this.props.removeInformation({ id: this.props.information.id })
+    this.props.startRemoveinforamtion({ id: this.props.information.id })
     this.props.history.push('/')
   }
 
    render() {
      return (
       <div>
+        <div className="page__header">
+          <div className="content__container">
+            <h1>Edit BlogPost</h1>
+          </div>
+        </div>
+        <div className="content__container">
         <BlogForm 
           information={this.props.information}
           onSubmit={this.onSubmit}
         />
-        <button onClick={this.onRemove} >Remove</button>
+        <div className="content__container">
+        <div className="move_delete_btn">
+          <button className="delete__btn" onClick={this.onRemove} ><MdDelete /></button>
+        </div>
+        </div>
+        </div>
       </div>
      );
    }
@@ -36,8 +48,8 @@ const mapStateToProps = (state, props) => ({
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
-  editInfomation: (id, information) => dispatch(editInfomation(id, information)),
-  removeInformation: (data) => dispatch(removeInformation(data))
+  startEditinforation: (id, information) => dispatch(startEditinforation(id, information)),
+  startRemoveinforamtion: (id) => dispatch(startRemoveinforamtion(id))
 });
 
 

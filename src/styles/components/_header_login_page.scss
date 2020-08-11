@@ -1,0 +1,289 @@
+.container_header__login 
+{
+    position: relative;
+    padding: 20px 20px;
+}
+
+.header_login 
+{
+    position: relative;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.6s;
+    min-height: 5vh;
+}
+
+
+.header_login .logo 
+{
+    position: relative;
+    font-weight: 600;
+    text-decoration: none;
+    color: $off-black;
+    font-size: 2em; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    padding-bottom: 1rem;
+}
+
+.text-pramary__side-bar 
+{
+    color:  #f23a2e;
+}
+
+.header_login .text-pramary 
+{
+    @extend .text-pramary__side-bar;
+}
+
+.header_login img 
+{
+    max-width: 4.5rem;
+}
+
+
+
+.header_login ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_login ul li 
+{
+    position: relative;
+    list-style: none;
+    padding-left: 2rem;
+    font-weight: 500;
+    padding-top: 2rem;
+}
+
+.header_login ul li  a 
+{
+    color: black;
+    text-decoration: none;
+    &:hover 
+    {
+        color: #fbc75d;
+        transition: 0.3s;
+    }
+}
+
+.burger__log-in
+{   
+    display: none;
+    font-size: 2rem;
+    padding-top: 3rem;
+    padding-right: 1rem;
+    cursor: pointer;
+}
+
+.right_nav ul
+{
+    display: none;
+}
+
+
+
+.header_login .logo_side__bar
+{
+    font-size: 1.3em; 
+    @extend .logo;
+}
+
+
+.header_login .logo_side__bar img
+{
+    max-width: 3rem;
+}
+
+
+.right_nav 
+{
+    width: 200px;
+    position: fixed;
+    right: 0;
+    z-index: 999;
+    padding-top: 30px;
+    background: white;
+    height: 37vh;
+    top: 2;
+    right: -40vw;
+    transition: right 0.5s ease;
+}
+
+.right_nav.open 
+{
+    right: 0%;
+}
+
+
+
+@include mediaLg
+{
+    .site-wrap 
+    {
+        width: auto;  
+    }
+
+    .header_login ul 
+    {
+        display: none;
+    }
+
+    .burger__log-in
+    {
+        display: block;
+    }
+ 
+    .header_login 
+    {
+        justify-content: space-between;
+    }
+
+    .right_nav ul
+    {
+        display: block;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+        font-size: 1rem;
+    }
+
+    .header_login .logo_side__bar 
+    {
+        display: inline;
+    }
+}
+
+
+
+@include mediaMd 
+{
+    .site-wrap 
+    {
+        width: auto;  
+    }
+
+    .header_login ul 
+    {
+        display: none;
+    }
+
+    .burger__log-in
+    {
+        display: block;
+    }
+ 
+    .header_login 
+    {
+        justify-content: space-between;
+    }
+
+    .right_nav ul
+    {
+        display: block;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+        font-size: 1rem;
+    }
+
+    .header_login .logo_side__bar 
+    {
+        display: inline;
+    }
+
+}
+
+
+
+
+@include mediaSm 
+{
+    .site-wrap 
+    {
+        width: auto;  
+    }
+
+    .header_login ul 
+    {
+        display: none;
+    }
+
+    .header_login ul li 
+    {
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+
+    .header_login img 
+    {
+        max-width: 2.5rem;
+    }
+
+    .header_login .logo 
+    {
+        font-size: 1em;
+        padding-bottom: 0%;
+    }
+    
+    .burger__log-in
+    {
+        display: block;
+        font-size: 1.5rem;
+        padding-top: 2rem;
+        padding-right: 0%;
+    }
+
+    .header_login 
+    {
+        justify-content: space-between;
+    }
+
+
+    .right_nav 
+    {
+        width: 150px;
+        height: 24vh;
+        top: 2;
+        right: -63vw;
+        padding-top: 10px;
+    }
+
+    .right_nav.open  
+    {
+        right: -10vw;
+    }
+
+    .right_nav ul
+    {
+        display: block;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+        font-size: 11px;
+    }
+
+    .header_login .logo_side__bar 
+    {
+        display: block;
+        font-size: 12px;
+    }
+
+    .header_login .logo_side__bar img {
+        max-width: 1.4rem;
+    }
+    
+    
+    
+}

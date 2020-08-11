@@ -1,0 +1,36 @@
+.list-item
+{
+    border: 1px solid darken($off-white, 7%);
+    color: black;
+    padding: $s-size;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0%;
+    border-radius: 5px;
+
+}
+
+.list-item__title 
+{
+    font-size: 2rem;
+    font-weight: 300;
+    color: #3ca59d;
+    word-break: break-all;
+}
+
+.list-item__sub
+{
+    word-break: break-all;
+    padding-top: 2rem;
+}
+
+.list-item_date 
+{
+    
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 100;
+    font-style: italic;
+    color: #969696;
+}

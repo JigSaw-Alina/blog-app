@@ -1,7 +1,10 @@
 // // Colors
 $-white:  #fffefc;
+$black: #0000;
 $grey: #666;
+$off-black: #1c1c1c;
 $off-white: #dbd5c5;
+
 // Font Size
 $font-size-large: 1.8rem;
 $font-size-small: 1.4rem;
@@ -16,4 +19,30 @@ $desktop-breakpoint: 45rem;
 // font styles 
 
 
+@mixin mediaSm {
+    @media only screen 
+    and (min-width: 320px) 
+    and (max-width: 499px)
+    and (-webkit-min-device-pixel-ratio: 1) {
+        @content;
+    }   
+}
 
+@mixin mediaMd {
+    @media only screen 
+    and (min-width: 500px) 
+    and (max-width: 667px)
+    and (-webkit-min-device-pixel-ratio: 1) {
+        @content;
+    }   
+   
+}
+
+@mixin mediaLg {
+    @media only screen 
+    and (min-width: 668px) 
+    and (max-width: 1024px) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+        @content;
+  }
+}

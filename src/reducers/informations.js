@@ -14,6 +14,8 @@ export default ((state = inforamtionReducerDefaultState, action) => {
             return state.map((data) => {
                 return (data.id === action.id) ? ({...data, ...action.updates }) : (data)
             })
+        case 'SET_INFORMATION':
+            return action.informations
         default:
             return state;
         

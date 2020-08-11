@@ -1,0 +1,39 @@
+.footer__copyright 
+{
+    background-color: black;
+    color: $-white;
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.footer__copyright span 
+{
+    color: #fbc75d;
+}
+
+@include mediaLg 
+{
+    .footer__copyright 
+    {
+        font-size: 13px;
+    }
+}
+
+
+@include mediaMd 
+{
+    .footer__copyright 
+    {
+        font-size: 13px;
+    }
+}
+
+
+@include mediaSm 
+{
+    .footer__copyright 
+    {
+        font-size: 8px;
+    }
+}

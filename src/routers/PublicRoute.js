@@ -4,7 +4,7 @@ import { Route, Redirect } from 'react-router-dom';
 
 
 
-export const PrivateRoute = ({
+export const PublicRoute = ({
     isAuthenticated,
     component: Component,
     ...rest
@@ -22,4 +22,4 @@ const mapStateToProps = (props) => ({
     isAuthenticated: !!props.auth.uid
 })
 
-export default connect(mapStateToProps)(PrivateRoute)
+export default connect(mapStateToProps)(PublicRoute)

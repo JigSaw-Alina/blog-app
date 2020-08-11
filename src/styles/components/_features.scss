@@ -1,0 +1,133 @@
+.container__features 
+{
+    padding: 0%;
+    position: relative;
+    scroll-snap-align: center;
+    background: #292f36;
+    scroll-snap-align: center;
+}
+
+
+
+.sub_page 
+{
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content span 
+{
+    color: #fbc75d;
+    padding: 0 2px;
+}
+
+
+.sub_page .content 
+{
+    position: relative;
+    max-width: 80%;
+    text-align: center;
+}
+
+.sub_page .content h1 
+{
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 10px;
+    color: $-white;
+}
+
+.sub_page .content p 
+{
+    font-size: 15px;
+    padding: 3px;
+    color: #999999;
+}
+
+
+@include mediaLg 
+{
+    .sub_page 
+    {
+        width: 100%;
+        height: 24vh;
+    }
+
+    .sub_page .content 
+    {
+        position: relative;
+        max-width: 100%;
+    } 
+
+    .sub_page .content h1 
+    {
+        font-size: 1.4rem;
+    }
+
+    .sub_page .content p 
+    {
+        font-size: 13px;
+        padding: 2px;
+    }
+}
+
+
+@include mediaMd 
+{
+    .sub_page 
+    {
+        width: 100%;
+        height: 24vh;
+    }
+
+    .sub_page .content 
+    {
+        position: relative;
+        max-width: 100%;
+    } 
+
+    .sub_page .content h1 
+    {
+        font-size: 15px;
+        line-height: 1.3;
+        
+    }
+
+    .sub_page .content p 
+    {
+        font-size: 9px;
+        padding: 2px;
+    }
+}
+
+@include mediaSm 
+{
+    .sub_page 
+    {
+        width: 100%;
+        height: 18vh;
+    }
+
+    .sub_page .content 
+    {
+        position: relative;
+        max-width: 100%;
+    } 
+
+    .sub_page .content h1 
+    {
+        font-size: 10px;        
+    }
+
+    .sub_page .content p 
+    {
+        font-size: 7px;
+        padding: 1px;
+    }
+
+}
+

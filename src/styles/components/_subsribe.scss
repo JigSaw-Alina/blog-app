@@ -1,0 +1,45 @@
+.section_subscribe 
+{
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    background: #171717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_subscribe img 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+
+.section_subscribe .content 
+{
+    position: relative;
+    max-width: 750px;
+    text-align: center;
+}
+
+
+.section_subscribe .content h2 
+{
+    color: white;
+    font-size: 40px;
+    padding-top: 3rem;
+}
+
+.section_subscribe .content p 
+{
+    color: #d6d6d6;
+    padding-top: 1rem;
+    line-height: 1.5rem;
+    padding-bottom: 1.5rem;
+}

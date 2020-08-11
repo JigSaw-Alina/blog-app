@@ -2,10 +2,6 @@ import * as firebase from 'firebase';
 
 
 // Your web app's Firebase configuration
-
-
-
-
 const config = {
     apiKey: process.env.FIREBASE_API_KEY,
     authDomain: process.env.FIREBASE_AUTH_DOMAIN,
@@ -20,27 +16,18 @@ const config = {
 // Initialize Firebase
   firebase.initializeApp(config);
   const database = firebase.database()
+  const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+  const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
+ 
 
+  googleAuthProvider.setCustomParameters({
+    prompt: 'select_account'
+  })
 
-export { firebase, database as default };
-
-
-
-
-
-
-//   // Initialize Firebase
-//   firebase.initializeApp(config);
-//   const database = firebase.database();
-//   const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
-
-//   googleAuthProvider.setCustomParameters({
-//     prompt: 'select_account'
-//   })
-  
-//   export  {  , googleAuthProvider, database as default };
   
 
 
+  
+export { firebase , facebookAuthProvider, googleAuthProvider, database as default };
 
 

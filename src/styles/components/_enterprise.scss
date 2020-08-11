@@ -1,0 +1,131 @@
+.container_retangular
+{
+    min-height: 100vh;
+    padding: 50px 100px 0;
+    position: relative;
+    background: black;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    scroll-snap-align: center
+}
+
+
+.container_retangular .content__enterprise
+{   
+    padding: 15px;
+    width: 100%;    
+}
+
+.container_retangular .content__enterprise h1 
+{
+    color: #fbc75d;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.container_retangular .content__enterprise h3 
+{
+    color:  #fbc75d;
+    padding: 2rem 0 2rem 0;
+    font-size: 1.5rem;
+
+}
+
+
+.container_retangular .content__enterprise p
+{
+    color: $-white;
+    line-height: 1.6;
+}
+
+.container_retangular .imgBx img 
+{
+    max-width: 35rem;
+    padding: 2rem;
+}
+
+
+@include mediaLg 
+{
+    .site-wrap 
+    {
+        width: auto;  
+    }
+
+    .container_retangular 
+    {
+        padding: 50px 50px;
+    }
+
+    .container_retangular .content__enterprise h1 
+    {
+        font-size: 2.7rem;
+    }
+
+    .container_retangular .content__enterprise h3 
+    {
+        padding: 2rem 0 1rem 0;
+    }
+
+    .container_retangular .imgBx img 
+    {
+        display: none;
+    }
+}
+
+@include mediaMd 
+{
+    .site-wrap 
+    {
+        width: auto;  
+    }
+
+    .container_retangular 
+    {
+        padding: 50px 20px;
+    }
+
+    .container_retangular .content__enterprise h1 
+    {
+        font-size: 2.7rem;
+    }
+
+    .container_retangular .content__enterprise h3 
+    {
+        padding: 2rem 0 10px 0;
+    }
+
+    .container_retangular .imgBx img 
+    {
+        display: none;
+    }
+}
+
+@include mediaSm 
+{
+    .site-wrap 
+    {
+        width: auto;  
+    }
+
+    .container_retangular 
+    {
+        padding: 30px 10px;
+    }
+
+    .container_retangular .content__enterprise h1 
+    {
+        font-size: 2.2rem;
+    }
+
+    .container_retangular .content__enterprise h3 
+    {
+        padding: 2rem 0 10px 0;
+    }
+
+    .container_retangular .imgBx img 
+    {
+        display: none;
+    }
+}

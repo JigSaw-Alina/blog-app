@@ -17,19 +17,27 @@ class BlogListFilters extends React.Component {
     };
     render() {
        return (
-        <div>
-          <input 
-            type="text" 
-            placeholder="search"
-            value={this.props.filters.text}
-            onChange={this.textChange}
-          />
-          <select 
-            onChange={this.selectChange}
-           >
-            <option value="date">sort by date</option>
-            <option value="alphabeticaly">sort by Alphabeticaly</option>
-          </select>
+        <div className="content_container">
+          <div className="input_grp">
+            <div className="input_grp_items">
+              <input 
+                className="input_text"
+                type="text" 
+                placeholder="search..."
+                value={this.props.filters.text}
+                onChange={this.textChange}
+              />
+            </div>
+            <div className="input_grp_items">
+              <select 
+                className="select"
+                onChange={this.selectChange}
+              >
+                <option value="date">sort by date</option>
+                <option value="alphabeticaly">sort by Alphabeticaly</option>
+              </select>
+            </div>
+          </div>
         </div>
        );
     }

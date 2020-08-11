@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import { BsFilePost } from 'react-icons/bs'
 
 export default  class BlogFrom extends React.Component {
    
@@ -37,12 +38,12 @@ export default  class BlogFrom extends React.Component {
     };
 
     render() {
-      console.log(this.state)
       return (
         <div>
-          {this.state.error && <p>{this.state.error}</p>}
-          <form onSubmit={this.onSubmit}>
+          <form className="form" onSubmit={this.onSubmit}>
+            {this.state.error && <p className="form__error">{this.state.error}</p>}
             <input 
+               className="text_input"
                type="text"
                placeholder="description" 
                autoFocus
@@ -50,11 +51,14 @@ export default  class BlogFrom extends React.Component {
                onChange={this.onDecriptionChange}
             />
             <textarea 
-               placeholder="post.."
+               className="text_area"
+               placeholder="POST YOUR PODCAST..."
                value={this.state.note}
                onChange={this.onNoteChange}
             />
-            <button>Post</button>
+            <div>
+              <button className="post_btn"><BsFilePost /></button>
+            </div>
           </form>
         </div>
       );

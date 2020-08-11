@@ -1,22 +1,29 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
+import * as createHistory from "history";
 import BlogAppDashboard from '../components/BlogAppDashboard';
+import BlogPost from '../components/BlogPost';
 import AddBlogPage from  '../components/AddBlogPage';
 import EditBlogPage from '../components/EditBlogPage';
-import Header from '../components/Header';
+import  LoginPage  from '../components/LoginPage'
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 
+
+export const history = createHistory.createBrowserHistory();
 
 const AppRouter = () => (
-  <BrowserRouter>
+  <Router history={history}>
    <div>
-    <Header />
     <Switch>
-      <Route path="/" component={BlogAppDashboard} exact={true} />
-      <Route path="/create" component={AddBlogPage} />
-      <Route path="/edit/:id" component={EditBlogPage} />
+      <PublicRoute path="/" component={LoginPage} exact={true} />
+      <PrivateRoute path="/dashboard" component={BlogAppDashboard} />
+      <PrivateRoute path="/post" component={BlogPost} />
+      <PrivateRoute path="/create" component={AddBlogPage} />
+      <PrivateRoute path="/edit/:id" component={EditBlogPage} />
     </Switch>
    </div>
-  </BrowserRouter>
+  </Router>
 );
 
 export default AppRouter;

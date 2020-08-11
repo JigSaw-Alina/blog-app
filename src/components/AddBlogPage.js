@@ -13,12 +13,18 @@ class AddBlogPage extends React.Component {
   };
   render () {
     return (
-      <div>
-        <h1>Add BlogPost</h1>
+     <div>
+       <div className="page__header">
+         <div className="content__container">
+          <h1>Add BlogPost</h1>
+         </div>
+       </div>
+       <div className="content__container">
         <BlogForm 
           onSubmit={this.onSubmit}
         />
       </div>
+     </div>
     )
   }
 };
